@@ -5,10 +5,12 @@
     <title>Backgammon</title>
     <script>
       function move() {
-        console.log("ok")
-        var x = Math.random() * 300
-        console.log(x)
-        document.getElementById("black").style.left = x.toString() + "px";
+               var x = Math.random() * 300
+               document.getElementById("black").style.left = x.toString() + "px";
+      }
+      function move2() {
+            var x = Math.random() * 300
+            document.getElementById("red").style.left = x.toString() + "px";
       }
     </script>
 </head>
@@ -17,20 +19,18 @@
 style="border:10px solid blue;">
 </canvas>
 
-
 <body>
     <button id='die' onclick = "myFunction()"></button>
     <button id='die2' onclick = "myFunction()"></button>
     <img width=75px id="black" src="Images/Black Backgammon Piece.jpg" onclick="move()">
-    <img width=75px id="red" src="Images/Red Backgammon Piece.jpg" onclick="move()">
+    <img width=75px id="red" src="Images/Red Backgammon Piece.jpg" onclick="move2()">
     </div>
     <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    ctx.font = "40px Arial";
+    ctx.font = "40px Times New Roman";
     ctx.fillStyle = "red";
     ctx.fillText("Welcome to Backgammon!",10,50);
-
     
     function myFunction() {
       var btn = document.querySelector("#die");
